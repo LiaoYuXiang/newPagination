@@ -44,8 +44,8 @@
   const keyword = ref('');
 
   const seabtn = ()=>{
-    window.location.replace(serchURL+keyword.value);
-    keyword.value = "";
+    window.location.replace(serchURL+encodeURIComponent(keyword.value));
+    keyword.value = '';
   }
   const onEnter = ()=>{
     if(event.key === 'Enter'){
